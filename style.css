@@ -1,0 +1,30 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;color:#333;overflow:hidden}
+.screen{min-height:100vh;width:100%;display:none;justify-content:center;align-items:center;padding:30px 20px;text-align:center}
+.opening{display:flex;background:linear-gradient(135deg,#fff5f8,#ffe0eb);position:relative}
+.opening-content{max-width:650px;padding:50px 30px;position:relative;z-index:5}
+.flower{font-size:90px;margin-bottom:20px;animation:floating 3s ease-in-out infinite}
+.small-title{font-size:12px;letter-spacing:4px;color:#d94f70;font-weight:bold;margin-bottom:20px}
+h1{font-size:clamp(45px,10vw,80px);color:#c9375c;margin-bottom:25px}
+h2{font-size:clamp(35px,7vw,55px);color:#c9375c;margin-bottom:25px}
+h3{color:#c9375c;font-size:22px}
+p{font-size:17px;line-height:1.9;color:#555;margin-bottom:20px}
+button{border:none;background:#d94f70;color:white;padding:16px 30px;border-radius:50px;font-size:14px;font-weight:bold;cursor:pointer;transition:.3s;box-shadow:0 10px 25px rgba(217,79,112,.3)}
+button:hover{transform:translateY(-4px) scale(1.03);background:#c9375c}
+.section{background:linear-gradient(135deg,#fff7fa,#ffe5ee)}
+.section.active{display:flex;animation:fadeIn .8s ease}
+.card{width:min(92%,650px);max-height:92vh;overflow:auto;padding:45px 35px;background:rgba(255,255,255,.92);border-radius:30px;box-shadow:0 20px 60px rgba(0,0,0,.1);border-top:5px solid #d94f70;position:relative;z-index:5}
+.card::-webkit-scrollbar{width:5px}.card::-webkit-scrollbar-thumb{background:#e9a0b3;border-radius:10px}
+.main-image{width:100%;max-width:450px;max-height:400px;object-fit:cover;border-radius:20px;margin:10px auto 25px;display:block;box-shadow:0 15px 40px rgba(0,0,0,.15)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:25px}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:15px;transition:.3s}
+.gallery img:hover{transform:scale(1.05) rotate(2deg)}
+.big-heart{font-size:75px;margin:10px 0;animation:heartbeat 1.3s infinite}
+.flowers{font-size:35px;margin:20px 0}
+#petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:20}
+.petal{position:absolute;top:-50px;font-size:22px;animation:fall linear forwards}
+@keyframes fall{0%{transform:translateY(-50px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:.8}}
+@keyframes floating{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+@media(max-width:600px){.card{padding:35px 22px;max-height:90vh}.gallery{gap:7px}.gallery img{border-radius:10px}p{font-size:15px}button{padding:14px 24px}.flower{font-size:75px}}

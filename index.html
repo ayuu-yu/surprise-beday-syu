@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surprise for you</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music/lagu.mp3" type="audio/mpeg">
+</audio>
+
+<div id="petals"></div>
+
+<!-- OPENING -->
+<section class="screen opening" id="opening">
+  <div class="opening-content">
+    <div class="flower">🌸</div>
+    <p class="small-title">HAPPY BIRTHDAY PUTERI NABILA SYUHADA</p>
+    <h1>Semoga dirahmati Allah selalu ❤️</h1>
+    <p>Semoga sentiasa berbahagia dgn family & kekasih</p>
+    <button onclick="startSurprise()">OPEN THIS 🎁</button>
+  </div>
+</section>
+
+<!-- SECTION 1 -->
+<section class="screen section" id="section1">
+  <div class="card">
+    <p class="small-title">FOR YOU FRIEND</p>
+    <h2>Thank you for always supporting me and always being there for me</h2>
+
+    <img src="images/gambar1.jpeg" class="main-image" alt="Memory">
+
+    <p>
+       Semoga hidupmu sentiasa dipermudahkan dan dipenuhi dengan perkara-perkara yang baik. 
+       Doakan aku juga satu hari nanti aku berjaya dalam hidup & happy w my family & (k)🤫 
+    </p>
+
+    <button onclick="nextSection(2)">LASTLY 🌸</button>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="screen section" id="section2">
+  <div class="card">
+    <p class="small-title"> 📸</p>
+    <h2>for u</h2>
+
+    <div class="gallery">
+      <img src="images/gambar4.jpeg" alt="Memory 1">
+      <img src="images/gambar2.jpeg" alt="Memory 2">
+      <img src="images/gambar3.jpeg" alt="Memory 3">
+    </div>
+
+    <p>
+      I hope life will always be kind to you…
+    </p>
+
+    <div class="big-heart">❤️</div>
+    <div class="flowers">🌹 🌷 🌸 🌹 🌷</div>
+    <h3>~UR FRIEND~</h3>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
